@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Data;
-using System.Data.Odbc;
-using System.Data.OleDb;
-
-using System.Windows.Forms;
+﻿using System.Data.OleDb;
 
 namespace OnlineBooking
 {
     class Database
     {
         public static OleDbConnection connection = new();
-        public static OleDbCommand command = new();
-        ///public static OleDbDataAdapter dataAdapter;
+        public static OleDbCommand command = new("", connection);
+        public static OleDbDataReader? dataAdapter;
 
-        ///public static string currentFullName;
-        ///public static string sql;
+        #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public static string currentFullName;
+        #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public static string sql;
+        #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
         public static string GetConnectionString()
         {

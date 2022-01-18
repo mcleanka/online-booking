@@ -36,6 +36,8 @@
             this.ButtonLogIn = new System.Windows.Forms.Button();
             this.LinkLabelRegisterHere = new System.Windows.Forms.LinkLabel();
             this.LabelDontHaveAccount = new System.Windows.Forms.Label();
+            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
+            this.ButtonCloseApp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelUsername
@@ -71,7 +73,7 @@
             this.TextBoxUserName.Location = new System.Drawing.Point(320, 159);
             this.TextBoxUserName.Name = "TextBoxUserName";
             this.TextBoxUserName.PlaceholderText = "Enter username";
-            this.TextBoxUserName.Size = new System.Drawing.Size(258, 27);
+            this.TextBoxUserName.Size = new System.Drawing.Size(327, 27);
             this.TextBoxUserName.TabIndex = 3;
             // 
             // TextBoxPassword
@@ -80,7 +82,7 @@
             this.TextBoxPassword.Name = "TextBoxPassword";
             this.TextBoxPassword.PasswordChar = '*';
             this.TextBoxPassword.PlaceholderText = "Enter valid passowrd";
-            this.TextBoxPassword.Size = new System.Drawing.Size(258, 27);
+            this.TextBoxPassword.Size = new System.Drawing.Size(327, 27);
             this.TextBoxPassword.TabIndex = 4;
             // 
             // ButtonLogIn
@@ -88,12 +90,13 @@
             this.ButtonLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ButtonLogIn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonLogIn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonLogIn.Location = new System.Drawing.Point(445, 271);
+            this.ButtonLogIn.Location = new System.Drawing.Point(514, 291);
             this.ButtonLogIn.Name = "ButtonLogIn";
             this.ButtonLogIn.Size = new System.Drawing.Size(133, 40);
             this.ButtonLogIn.TabIndex = 12;
             this.ButtonLogIn.Text = "Log In";
             this.ButtonLogIn.UseVisualStyleBackColor = false;
+            this.ButtonLogIn.Click += new System.EventHandler(this.ButtonLogIn_Click);
             // 
             // LinkLabelRegisterHere
             // 
@@ -115,11 +118,37 @@
             this.LabelDontHaveAccount.TabIndex = 14;
             this.LabelDontHaveAccount.Text = "Don\'t have an account?";
             // 
+            // checkBoxShowPassword
+            // 
+            this.checkBoxShowPassword.AutoSize = true;
+            this.checkBoxShowPassword.Location = new System.Drawing.Point(320, 248);
+            this.checkBoxShowPassword.Name = "checkBoxShowPassword";
+            this.checkBoxShowPassword.Size = new System.Drawing.Size(134, 24);
+            this.checkBoxShowPassword.TabIndex = 15;
+            this.checkBoxShowPassword.Text = "Show password";
+            this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
+            // 
+            // ButtonCloseApp
+            // 
+            this.ButtonCloseApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ButtonCloseApp.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonCloseApp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ButtonCloseApp.Location = new System.Drawing.Point(319, 291);
+            this.ButtonCloseApp.Name = "ButtonCloseApp";
+            this.ButtonCloseApp.Size = new System.Drawing.Size(133, 40);
+            this.ButtonCloseApp.TabIndex = 16;
+            this.ButtonCloseApp.Text = "Cancel";
+            this.ButtonCloseApp.UseVisualStyleBackColor = false;
+            this.ButtonCloseApp.Click += new System.EventHandler(this.ButtonCloseApp_Click);
+            // 
             // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 450);
+            this.Controls.Add(this.ButtonCloseApp);
+            this.Controls.Add(this.checkBoxShowPassword);
             this.Controls.Add(this.LabelDontHaveAccount);
             this.Controls.Add(this.LinkLabelRegisterHere);
             this.Controls.Add(this.ButtonLogIn);
@@ -130,7 +159,6 @@
             this.Controls.Add(this.LabelUsername);
             this.Name = "LogInForm";
             this.Text = "LogIn";
-            this.Load += new System.EventHandler(this.LogInForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,5 +174,7 @@
         private Button ButtonLogIn;
         private LinkLabel LinkLabelRegisterHere;
         private Label LabelDontHaveAccount;
+        private CheckBox checkBoxShowPassword;
+        private Button ButtonCloseApp;
     }
 }

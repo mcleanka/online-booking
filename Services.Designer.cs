@@ -1,6 +1,6 @@
 ﻿namespace OnlineBooking
 {
-    partial class Services
+    partial class FormServices
     {
         /// <summary>
         /// Required designer variable.
@@ -156,7 +156,7 @@
             this.dataGridViewAllServices.Size = new System.Drawing.Size(773, 258);
             this.dataGridViewAllServices.TabIndex = 33;
             // 
-            // Services
+            // FormServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,7 +168,7 @@
             this.Controls.Add(this.buttonEditUser);
             this.Controls.Add(this.buttonDeleteUser);
             this.Controls.Add(this.buttonBookService);
-            this.Name = "Services";
+            this.Name = "FormServices";
             this.Text = "Services";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OnlineBooking
 {
-    public partial class Services : Form
+    public partial class FormServices : Form
     {
-        public Services()
+        public FormServices()
         {
             InitializeComponent();
         }
