@@ -39,6 +39,7 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelservicesTable = new System.Windows.Forms.Label();
             this.dataGridViewAllServices = new System.Windows.Forms.DataGridView();
+            this.ButtonAddService = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllServices)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +47,7 @@
             // buttonBookService
             // 
             this.buttonBookService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonBookService.Location = new System.Drawing.Point(393, 161);
+            this.buttonBookService.Location = new System.Drawing.Point(422, 226);
             this.buttonBookService.Name = "buttonBookService";
             this.buttonBookService.Size = new System.Drawing.Size(117, 40);
             this.buttonBookService.TabIndex = 27;
@@ -56,7 +57,7 @@
             // buttonEditUser
             // 
             this.buttonEditUser.ForeColor = System.Drawing.Color.Teal;
-            this.buttonEditUser.Location = new System.Drawing.Point(516, 161);
+            this.buttonEditUser.Location = new System.Drawing.Point(545, 226);
             this.buttonEditUser.Name = "buttonEditUser";
             this.buttonEditUser.Size = new System.Drawing.Size(117, 40);
             this.buttonEditUser.TabIndex = 29;
@@ -66,7 +67,7 @@
             // buttonDeleteUser
             // 
             this.buttonDeleteUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonDeleteUser.Location = new System.Drawing.Point(639, 161);
+            this.buttonDeleteUser.Location = new System.Drawing.Point(668, 226);
             this.buttonDeleteUser.Name = "buttonDeleteUser";
             this.buttonDeleteUser.Size = new System.Drawing.Size(117, 40);
             this.buttonDeleteUser.TabIndex = 28;
@@ -127,20 +128,20 @@
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Calisto MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTitle.ForeColor = System.Drawing.Color.Teal;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelTitle.Location = new System.Drawing.Point(271, 25);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(221, 35);
+            this.labelTitle.Size = new System.Drawing.Size(282, 46);
             this.labelTitle.TabIndex = 31;
-            this.labelTitle.Text = "Service Booking";
+            this.labelTitle.Text = "Available Services";
             // 
             // labelservicesTable
             // 
             this.labelservicesTable.AutoSize = true;
-            this.labelservicesTable.Location = new System.Drawing.Point(12, 226);
+            this.labelservicesTable.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelservicesTable.Location = new System.Drawing.Point(12, 236);
             this.labelservicesTable.Name = "labelservicesTable";
-            this.labelservicesTable.Size = new System.Drawing.Size(101, 20);
+            this.labelservicesTable.Size = new System.Drawing.Size(132, 25);
             this.labelservicesTable.TabIndex = 32;
             this.labelservicesTable.Text = "Services Table";
             // 
@@ -156,11 +157,21 @@
             this.dataGridViewAllServices.Size = new System.Drawing.Size(773, 258);
             this.dataGridViewAllServices.TabIndex = 33;
             // 
+            // ButtonAddService
+            // 
+            this.ButtonAddService.Location = new System.Drawing.Point(299, 226);
+            this.ButtonAddService.Name = "ButtonAddService";
+            this.ButtonAddService.Size = new System.Drawing.Size(117, 40);
+            this.ButtonAddService.TabIndex = 34;
+            this.ButtonAddService.Text = "Add";
+            this.ButtonAddService.UseVisualStyleBackColor = true;
+            // 
             // FormServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 538);
+            this.Controls.Add(this.ButtonAddService);
             this.Controls.Add(this.dataGridViewAllServices);
             this.Controls.Add(this.labelservicesTable);
             this.Controls.Add(this.labelTitle);
@@ -170,6 +181,7 @@
             this.Controls.Add(this.buttonBookService);
             this.Name = "FormServices";
             this.Text = "Services";
+            this.Load += new System.EventHandler(this.FormServices_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllServices)).EndInit();
@@ -191,5 +203,6 @@
         private Label labelTitle;
         private Label labelservicesTable;
         private DataGridView dataGridViewAllServices;
+        private Button ButtonAddService;
     }
 }
