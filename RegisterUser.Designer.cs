@@ -28,133 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelRegister = new System.Windows.Forms.Label();
-            this.labelFullName = new System.Windows.Forms.Label();
-            this.labelPhoneNumber = new System.Windows.Forms.Label();
-            this.labelAddress = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonRegister = new System.Windows.Forms.Button();
+            this.LabelRegister = new System.Windows.Forms.Label();
+            this.LabelPassword = new System.Windows.Forms.Label();
+            this.TextBoxPassword = new System.Windows.Forms.TextBox();
+            this.TextBoxUserName = new System.Windows.Forms.TextBox();
+            this.LabelUsername = new System.Windows.Forms.Label();
+            this.ButtonRegister = new System.Windows.Forms.Button();
             this.LabelHaveAnAccount = new System.Windows.Forms.Label();
             this.LinkLabelLogIn = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // labelRegister
+            // LabelRegister
             // 
-            this.labelRegister.AutoSize = true;
-            this.labelRegister.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelRegister.Location = new System.Drawing.Point(302, 63);
-            this.labelRegister.Name = "labelRegister";
-            this.labelRegister.Size = new System.Drawing.Size(317, 31);
-            this.labelRegister.TabIndex = 0;
-            this.labelRegister.Text = "Register To Service Booking";
+            this.LabelRegister.AutoSize = true;
+            this.LabelRegister.Font = new System.Drawing.Font("Bookman Old Style", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelRegister.Location = new System.Drawing.Point(189, 27);
+            this.LabelRegister.Name = "LabelRegister";
+            this.LabelRegister.Size = new System.Drawing.Size(423, 37);
+            this.LabelRegister.TabIndex = 0;
+            this.LabelRegister.Text = "Register To Service Booking";
             // 
-            // labelFullName
+            // LabelPassword
             // 
-            this.labelFullName.AutoSize = true;
-            this.labelFullName.Location = new System.Drawing.Point(270, 150);
-            this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(76, 20);
-            this.labelFullName.TabIndex = 1;
-            this.labelFullName.Text = "Full Name";
+            this.LabelPassword.AutoSize = true;
+            this.LabelPassword.Location = new System.Drawing.Point(162, 197);
+            this.LabelPassword.Name = "LabelPassword";
+            this.LabelPassword.Size = new System.Drawing.Size(70, 20);
+            this.LabelPassword.TabIndex = 4;
+            this.LabelPassword.Text = "Password";
             // 
-            // labelPhoneNumber
+            // TextBoxPassword
             // 
-            this.labelPhoneNumber.AutoSize = true;
-            this.labelPhoneNumber.Location = new System.Drawing.Point(270, 223);
-            this.labelPhoneNumber.Name = "labelPhoneNumber";
-            this.labelPhoneNumber.Size = new System.Drawing.Size(108, 20);
-            this.labelPhoneNumber.TabIndex = 2;
-            this.labelPhoneNumber.Text = "Phone Number";
+            this.TextBoxPassword.Location = new System.Drawing.Point(304, 190);
+            this.TextBoxPassword.Name = "TextBoxPassword";
+            this.TextBoxPassword.PlaceholderText = "Enter password";
+            this.TextBoxPassword.Size = new System.Drawing.Size(329, 27);
+            this.TextBoxPassword.TabIndex = 2;
             // 
-            // labelAddress
+            // TextBoxUserName
             // 
-            this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(270, 290);
-            this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(62, 20);
-            this.labelAddress.TabIndex = 3;
-            this.labelAddress.Text = "Address";
+            this.TextBoxUserName.Location = new System.Drawing.Point(304, 116);
+            this.TextBoxUserName.Name = "TextBoxUserName";
+            this.TextBoxUserName.PlaceholderText = "Enter username";
+            this.TextBoxUserName.Size = new System.Drawing.Size(329, 27);
+            this.TextBoxUserName.TabIndex = 1;
             // 
-            // labelPassword
+            // LabelUsername
             // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(270, 420);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(70, 20);
-            this.labelPassword.TabIndex = 4;
-            this.labelPassword.Text = "Password";
+            this.LabelUsername.AutoSize = true;
+            this.LabelUsername.Location = new System.Drawing.Point(157, 119);
+            this.LabelUsername.Name = "LabelUsername";
+            this.LabelUsername.Size = new System.Drawing.Size(75, 20);
+            this.LabelUsername.TabIndex = 10;
+            this.LabelUsername.Text = "Username";
             // 
-            // textBox1
+            // ButtonRegister
             // 
-            this.textBox1.Location = new System.Drawing.Point(396, 147);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Enter your full name";
-            this.textBox1.Size = new System.Drawing.Size(252, 27);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(396, 216);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Enter mobile phone number";
-            this.textBox2.Size = new System.Drawing.Size(252, 27);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(396, 417);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PlaceholderText = "Enter secretive password";
-            this.textBox3.Size = new System.Drawing.Size(252, 27);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(396, 283);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = "Mailing Box address";
-            this.textBox4.Size = new System.Drawing.Size(252, 27);
-            this.textBox4.TabIndex = 8;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(396, 356);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PlaceholderText = "Enter username";
-            this.textBox5.Size = new System.Drawing.Size(252, 27);
-            this.textBox5.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(270, 363);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Username";
-            // 
-            // buttonRegister
-            // 
-            this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonRegister.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonRegister.Location = new System.Drawing.Point(536, 471);
-            this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(112, 38);
-            this.buttonRegister.TabIndex = 11;
-            this.buttonRegister.Text = "Register";
-            this.buttonRegister.UseVisualStyleBackColor = false;
+            this.ButtonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.ButtonRegister.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ButtonRegister.Location = new System.Drawing.Point(510, 275);
+            this.ButtonRegister.Name = "ButtonRegister";
+            this.ButtonRegister.Size = new System.Drawing.Size(112, 38);
+            this.ButtonRegister.TabIndex = 11;
+            this.ButtonRegister.Text = "Register";
+            this.ButtonRegister.UseVisualStyleBackColor = false;
+            this.ButtonRegister.Click += new System.EventHandler(this.ButtonRegister_Click);
             // 
             // LabelHaveAnAccount
             // 
             this.LabelHaveAnAccount.AutoSize = true;
-            this.LabelHaveAnAccount.Location = new System.Drawing.Point(396, 551);
+            this.LabelHaveAnAccount.Location = new System.Drawing.Point(162, 285);
             this.LabelHaveAnAccount.Name = "LabelHaveAnAccount";
             this.LabelHaveAnAccount.Size = new System.Drawing.Size(169, 20);
             this.LabelHaveAnAccount.TabIndex = 15;
@@ -163,7 +107,7 @@
             // LinkLabelLogIn
             // 
             this.LinkLabelLogIn.AutoSize = true;
-            this.LinkLabelLogIn.Location = new System.Drawing.Point(422, 602);
+            this.LinkLabelLogIn.Location = new System.Drawing.Point(337, 285);
             this.LinkLabelLogIn.Name = "LinkLabelLogIn";
             this.LinkLabelLogIn.Size = new System.Drawing.Size(50, 20);
             this.LinkLabelLogIn.TabIndex = 16;
@@ -175,24 +119,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 661);
+            this.ClientSize = new System.Drawing.Size(775, 396);
             this.Controls.Add(this.LinkLabelLogIn);
             this.Controls.Add(this.LabelHaveAnAccount);
-            this.Controls.Add(this.buttonRegister);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.labelAddress);
-            this.Controls.Add(this.labelPhoneNumber);
-            this.Controls.Add(this.labelFullName);
-            this.Controls.Add(this.labelRegister);
+            this.Controls.Add(this.ButtonRegister);
+            this.Controls.Add(this.LabelUsername);
+            this.Controls.Add(this.TextBoxUserName);
+            this.Controls.Add(this.TextBoxPassword);
+            this.Controls.Add(this.LabelPassword);
+            this.Controls.Add(this.LabelRegister);
             this.Name = "RegisterUserForm";
             this.Text = "Register";
-            this.Load += new System.EventHandler(this.RegisterUserForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,18 +137,12 @@
 
         #endregion
 
-        private Label labelRegister;
-        private Label labelFullName;
-        private Label labelPhoneNumber;
-        private Label labelAddress;
-        private Label labelPassword;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private Label label1;
-        private Button buttonRegister;
+        private Label LabelRegister;
+        private Label LabelPassword;
+        private TextBox TextBoxPassword;
+        private TextBox TextBoxUserName;
+        private Label LabelUsername;
+        private Button ButtonRegister;
         private Label LabelHaveAnAccount;
         private LinkLabel LinkLabelLogIn;
     }

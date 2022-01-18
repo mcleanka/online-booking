@@ -8,17 +8,16 @@ namespace OnlineBooking
         public static OleDbCommand command = new("", connection);
         public static OleDbDataReader? dataAdapter;
 
-        #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public static string currentFullName;
-        #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-        public static string sql;
-        #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
+        public static string? sessionUserName;
+        //public static string? sessionUserID;
+        //public static string? sessionPassword;
+
+        public static string? sql;
 
         public static string GetConnectionString()
         {
-            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=" + 
-            Application.StartupPath + "\\DB\\Order Bookings DB.accdb";
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" + 
+                "Data Source=" + Application.StartupPath + "\\DB\\Order Bookings DB.accdb";
 
             return connectionString;
         }
@@ -31,7 +30,7 @@ namespace OnlineBooking
                 connection.Open();
             } catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), "DB Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "DB Connection Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -40,8 +39,7 @@ namespace OnlineBooking
             try
             {
                 connection.Close();
-            }
-            catch (Exception ex)
+            } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString(), "DB Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

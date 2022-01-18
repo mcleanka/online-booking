@@ -36,7 +36,7 @@
             this.ButtonLogIn = new System.Windows.Forms.Button();
             this.LinkLabelRegisterHere = new System.Windows.Forms.LinkLabel();
             this.LabelDontHaveAccount = new System.Windows.Forms.Label();
-            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
+            this.CheckBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.ButtonCloseApp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -61,10 +61,10 @@
             // LabelOnlineBooking
             // 
             this.LabelOnlineBooking.AutoSize = true;
-            this.LabelOnlineBooking.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabelOnlineBooking.Location = new System.Drawing.Point(284, 62);
+            this.LabelOnlineBooking.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelOnlineBooking.Location = new System.Drawing.Point(282, 46);
             this.LabelOnlineBooking.Name = "LabelOnlineBooking";
-            this.LabelOnlineBooking.Size = new System.Drawing.Size(282, 31);
+            this.LabelOnlineBooking.Size = new System.Drawing.Size(350, 41);
             this.LabelOnlineBooking.TabIndex = 2;
             this.LabelOnlineBooking.Text = "Login To Service Booking";
             // 
@@ -101,7 +101,7 @@
             // LinkLabelRegisterHere
             // 
             this.LinkLabelRegisterHere.AutoSize = true;
-            this.LinkLabelRegisterHere.Location = new System.Drawing.Point(353, 394);
+            this.LinkLabelRegisterHere.Location = new System.Drawing.Point(494, 395);
             this.LinkLabelRegisterHere.Name = "LinkLabelRegisterHere";
             this.LinkLabelRegisterHere.Size = new System.Drawing.Size(99, 20);
             this.LinkLabelRegisterHere.TabIndex = 13;
@@ -112,22 +112,22 @@
             // LabelDontHaveAccount
             // 
             this.LabelDontHaveAccount.AutoSize = true;
-            this.LabelDontHaveAccount.Location = new System.Drawing.Point(320, 358);
+            this.LabelDontHaveAccount.Location = new System.Drawing.Point(319, 395);
             this.LabelDontHaveAccount.Name = "LabelDontHaveAccount";
             this.LabelDontHaveAccount.Size = new System.Drawing.Size(163, 20);
             this.LabelDontHaveAccount.TabIndex = 14;
             this.LabelDontHaveAccount.Text = "Don\'t have an account?";
             // 
-            // checkBoxShowPassword
+            // CheckBoxShowPassword
             // 
-            this.checkBoxShowPassword.AutoSize = true;
-            this.checkBoxShowPassword.Location = new System.Drawing.Point(320, 248);
-            this.checkBoxShowPassword.Name = "checkBoxShowPassword";
-            this.checkBoxShowPassword.Size = new System.Drawing.Size(134, 24);
-            this.checkBoxShowPassword.TabIndex = 15;
-            this.checkBoxShowPassword.Text = "Show password";
-            this.checkBoxShowPassword.UseVisualStyleBackColor = true;
-            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
+            this.CheckBoxShowPassword.AutoSize = true;
+            this.CheckBoxShowPassword.Location = new System.Drawing.Point(320, 248);
+            this.CheckBoxShowPassword.Name = "CheckBoxShowPassword";
+            this.CheckBoxShowPassword.Size = new System.Drawing.Size(134, 24);
+            this.CheckBoxShowPassword.TabIndex = 15;
+            this.CheckBoxShowPassword.Text = "Show password";
+            this.CheckBoxShowPassword.UseVisualStyleBackColor = true;
+            this.CheckBoxShowPassword.CheckedChanged += new System.EventHandler(this.CheckBoxShowPassword_CheckedChanged);
             // 
             // ButtonCloseApp
             // 
@@ -146,9 +146,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 450);
+            this.ClientSize = new System.Drawing.Size(873, 471);
             this.Controls.Add(this.ButtonCloseApp);
-            this.Controls.Add(this.checkBoxShowPassword);
+            this.Controls.Add(this.CheckBoxShowPassword);
             this.Controls.Add(this.LabelDontHaveAccount);
             this.Controls.Add(this.LinkLabelRegisterHere);
             this.Controls.Add(this.ButtonLogIn);
@@ -174,7 +174,7 @@
         private Button ButtonLogIn;
         private LinkLabel LinkLabelRegisterHere;
         private Label LabelDontHaveAccount;
-        private CheckBox checkBoxShowPassword;
+        private CheckBox CheckBoxShowPassword;
         private Button ButtonCloseApp;
     }
 }
