@@ -19,5 +19,13 @@ namespace OnlineBooking
 
             this.Hide();
         }
+
+        private void LogInForm_Load(object sender, EventArgs e)
+        {
+            Database.OpenConnection();
+            MessageBox.Show("The connection is" + Database.connection.State.ToString());
+
+            Database.CloseConnection();
+        }
     }
 }

@@ -130,6 +130,7 @@
             this.Controls.Add(this.LabelUsername);
             this.Name = "LogInForm";
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.LogInForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
