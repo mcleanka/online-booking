@@ -31,8 +31,9 @@
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelOnlineBooking = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxUserName = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.buttonLogIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelUsername
@@ -56,37 +57,50 @@
             // labelOnlineBooking
             // 
             this.labelOnlineBooking.AutoSize = true;
-            this.labelOnlineBooking.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelOnlineBooking.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelOnlineBooking.Location = new System.Drawing.Point(284, 62);
             this.labelOnlineBooking.Name = "labelOnlineBooking";
-            this.labelOnlineBooking.Size = new System.Drawing.Size(282, 27);
+            this.labelOnlineBooking.Size = new System.Drawing.Size(282, 31);
             this.labelOnlineBooking.TabIndex = 2;
-            this.labelOnlineBooking.Text = "Login To Online Booking";
+            this.labelOnlineBooking.Text = "Login To Service Booking";
             // 
-            // textBox1
+            // textBoxUserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(320, 159);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Enter username";
-            this.textBox1.Size = new System.Drawing.Size(258, 27);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxUserName.Location = new System.Drawing.Point(320, 159);
+            this.textBoxUserName.Name = "textBoxUserName";
+            this.textBoxUserName.PlaceholderText = "Enter username";
+            this.textBoxUserName.Size = new System.Drawing.Size(258, 27);
+            this.textBoxUserName.TabIndex = 3;
+            this.textBoxUserName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // textBoxPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(320, 215);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Enter valid passowrd";
-            this.textBox2.Size = new System.Drawing.Size(258, 27);
-            this.textBox2.TabIndex = 4;
+            this.textBoxPassword.Location = new System.Drawing.Point(320, 215);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PlaceholderText = "Enter valid passowrd";
+            this.textBoxPassword.Size = new System.Drawing.Size(258, 27);
+            this.textBoxPassword.TabIndex = 4;
+            // 
+            // buttonLogIn
+            // 
+            this.buttonLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.buttonLogIn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonLogIn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonLogIn.Location = new System.Drawing.Point(445, 271);
+            this.buttonLogIn.Name = "buttonLogIn";
+            this.buttonLogIn.Size = new System.Drawing.Size(133, 40);
+            this.buttonLogIn.TabIndex = 12;
+            this.buttonLogIn.Text = "Log In";
+            this.buttonLogIn.UseVisualStyleBackColor = false;
             // 
             // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonLogIn);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.textBoxUserName);
             this.Controls.Add(this.labelOnlineBooking);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
@@ -102,7 +116,8 @@
         private Label labelUsername;
         private Label labelPassword;
         private Label labelOnlineBooking;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textBoxUserName;
+        private TextBox textBoxPassword;
+        private Button buttonLogIn;
     }
 }
