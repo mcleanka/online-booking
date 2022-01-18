@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace OnlineBooking
 {
-    internal class AccessDatabaseConnection
+    class AccessDatabaseConnection
     {
-
+        
     }
 }

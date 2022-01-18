@@ -40,7 +40,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonRegister = new System.Windows.Forms.Button();
-            this.buttonCancelRegistration = new System.Windows.Forms.Button();
+            this.LabelHaveAnAccount = new System.Windows.Forms.Label();
+            this.LinkLabelLogIn = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // labelRegister
@@ -143,31 +144,40 @@
             this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.buttonRegister.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonRegister.Location = new System.Drawing.Point(526, 477);
+            this.buttonRegister.Location = new System.Drawing.Point(536, 471);
             this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(133, 49);
+            this.buttonRegister.Size = new System.Drawing.Size(112, 38);
             this.buttonRegister.TabIndex = 11;
             this.buttonRegister.Text = "Register";
             this.buttonRegister.UseVisualStyleBackColor = false;
             // 
-            // buttonCancelRegistration
+            // LabelHaveAnAccount
             // 
-            this.buttonCancelRegistration.BackColor = System.Drawing.Color.Red;
-            this.buttonCancelRegistration.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonCancelRegistration.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonCancelRegistration.Location = new System.Drawing.Point(387, 477);
-            this.buttonCancelRegistration.Name = "buttonCancelRegistration";
-            this.buttonCancelRegistration.Size = new System.Drawing.Size(133, 49);
-            this.buttonCancelRegistration.TabIndex = 12;
-            this.buttonCancelRegistration.Text = "Cancel";
-            this.buttonCancelRegistration.UseVisualStyleBackColor = false;
+            this.LabelHaveAnAccount.AutoSize = true;
+            this.LabelHaveAnAccount.Location = new System.Drawing.Point(396, 551);
+            this.LabelHaveAnAccount.Name = "LabelHaveAnAccount";
+            this.LabelHaveAnAccount.Size = new System.Drawing.Size(169, 20);
+            this.LabelHaveAnAccount.TabIndex = 15;
+            this.LabelHaveAnAccount.Text = "I ready have an account!";
+            // 
+            // LinkLabelLogIn
+            // 
+            this.LinkLabelLogIn.AutoSize = true;
+            this.LinkLabelLogIn.Location = new System.Drawing.Point(422, 602);
+            this.LinkLabelLogIn.Name = "LinkLabelLogIn";
+            this.LinkLabelLogIn.Size = new System.Drawing.Size(50, 20);
+            this.LinkLabelLogIn.TabIndex = 16;
+            this.LinkLabelLogIn.TabStop = true;
+            this.LinkLabelLogIn.Text = "Log In";
+            this.LinkLabelLogIn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelLogIn_LinkClicked);
             // 
             // RegisterUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 549);
-            this.Controls.Add(this.buttonCancelRegistration);
+            this.ClientSize = new System.Drawing.Size(858, 661);
+            this.Controls.Add(this.LinkLabelLogIn);
+            this.Controls.Add(this.LabelHaveAnAccount);
             this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox5);
@@ -202,6 +212,7 @@
         private TextBox textBox5;
         private Label label1;
         private Button buttonRegister;
-        private Button buttonCancelRegistration;
+        private Label LabelHaveAnAccount;
+        private LinkLabel LinkLabelLogIn;
     }
 }
