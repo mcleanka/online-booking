@@ -101,7 +101,7 @@ namespace OnlineBooking
 
             Database.OpenConnection();
 
-            OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT ServiceID, ServiceName, Price FROM Services ORDER BY ServiceID", Database.connection);
+            OleDbDataAdapter adapter = new("SELECT ServiceID, ServiceName, Price FROM Services ORDER BY ServiceID", Database.connection);
             adapter.Fill(dataTable);
 
             dataGridViewAllServices.DataSource = dataTable;
@@ -141,16 +141,18 @@ namespace OnlineBooking
             }
             Database.OpenConnection();
 
-            Database.sql = "UPDATE Services SET [ServiceName] = @name, [Price] = @price WHERE [ServiceID] = @id";
+            Database.sql = "UPDATE Services SET ServiceName = " + this.TextBoxServiceName.Text.Trim().ToString() + "," +
+                " Price = " + this.TextBoxServicePrice.Text.Trim().ToString() + "" +
+                " WHERE ServiceID = " + this.TextBoxServiceID.Text.Trim().ToString() + "";
 
-            Database.command.Parameters.Clear();
+            // Database.command.Parameters.Clear();
             Database.command.CommandType = System.Data.CommandType.Text;
             Database.command.CommandText = Database.sql;
 
             // params for user creditations
-            Database.command.Parameters.AddWithValue("@id", Int32.Parse(this.TextBoxServiceID.Text.Trim().ToString()));
+            /*Database.command.Parameters.AddWithValue("@id", Int32.Parse(this.TextBoxServiceID.Text.Trim().ToString()));
             Database.command.Parameters.AddWithValue("@name", this.TextBoxServiceName.Text.Trim().ToString());
-            Database.command.Parameters.AddWithValue("@price", Int32.Parse(this.TextBoxServicePrice.Text.Trim().ToString()));
+            Database.command.Parameters.AddWithValue("@price", Int32.Parse(this.TextBoxServicePrice.Text.Trim().ToString()));*/
 
             Database.command.ExecuteNonQuery();
             Database.CloseConnection();
@@ -195,9 +197,45 @@ namespace OnlineBooking
             Database.CloseConnection();
         }
 
-        private int CalculateBookingAmount()
+        private static int CalculateBookingAmount()
         {
-            return 3;
+            int amount = 0;
+
+            return amount;
+        }
+
+        private void ButtonDeleteService_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(this.TextBoxServiceID.Text.Trim()))
+            {
+                /// fill all field
+                MessageBox.Show(
+                    "Service ID can not be empty!",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation
+                );
+
+                if (this.TextBoxServiceID.CanSelect)
+                {
+                    this.TextBoxServiceID.Select();
+                }
+
+                return;
+
+
+            }
+
+            Database.OpenConnection();
+
+            Database.sql = "DELETE FROM Services WHERE ServiceID=" + this.TextBoxServiceID.Text.Trim().ToString() + "";
+
+            Database.command.CommandType = System.Data.CommandType.Text;
+            Database.command.CommandText = Database.sql;
+            Database.command.ExecuteNonQuery();
+            Database.CloseConnection();
+
+            ReloadDataSetView();
         }
     }
 }

@@ -61,8 +61,9 @@ namespace OnlineBooking
             {
                 while (Database.dataAdapter.Read())
                 {
-                    Database.sessionUserName = Database.dataAdapter[0].ToString() + " " + Database.dataAdapter[0].ToString();
-                    
+                    Database.sessionUserName = Database.dataAdapter[0].ToString();
+                    Database.sessionUserID = Database.dataAdapter[2].ToString();
+
                     MessageBox.Show(
                         "Welcome " + Database.sessionUserName,
                         "Login successed",

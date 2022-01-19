@@ -81,6 +81,7 @@
             this.ButtonDeleteService.TabIndex = 28;
             this.ButtonDeleteService.Text = "Delete";
             this.ButtonDeleteService.UseVisualStyleBackColor = true;
+            this.ButtonDeleteService.Click += new System.EventHandler(this.ButtonDeleteService_Click);
             // 
             // panel1
             // 
